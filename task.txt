@@ -1,0 +1,35 @@
+Task 2: Combining forecasts
+
+Situation
+You have received the daily forecasts of 15 different models for the same set of stocks. The models differ.
+Try to combine the predictions so that the aggregate is better than the individual models. The stocks are
+anonymised, and price data is provided only for the development period.
+
+Data
+dev.parquet             for each day and stock, the 15 model forecasts (m01..m15). A forecast made on day t is
+                        about the stock's return over the next 10 trading days, from the open of day t+1 to the
+                        open of day t+11.
+price.parquet           the open price (same currency) for exactly the days and stocks of dev.parquet. You can assume no fees for
+                        trading.
+test.parquet            the same forecasts for the later period, starting the day after dev.parquet ends.
+submission-example.txt  an example submission for the test period; its header lists the submission rules.
+The day index is already in trading days, starting from 1.
+
+Your task
+Combine the 15 forecasts into one daily allocation for the test period (see submission-example.txt).
+Explain how you approached the task, what your solution is and why, and what you can say about the
+individual models.
+
+Rules
+Any method is fine, whether statistics, ML or anything else. Use only the data provided, and only
+information that would have been available at the time. Do not assume anything not visibly stated here.
+Any tools are allowed, including AI assistants. You are responsible for the output, so prefer what you
+understand. You have ~24 hours. Before your interview timeslot send us the submission file or a link to it.
+
+How it is judged
+The most important thing is to see how you approached the challenge and how you think about it.
+The submission is judged by a few reasonable metrics on the test period, but the performance is only
+secondary and much less important.
+
+Good luck!
+

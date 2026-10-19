@@ -1,0 +1,5 @@
+.venv/
+*.parquet
+.ipynb_checkpoints/
+.DS_Store
+Cell output *.csv
